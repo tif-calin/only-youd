@@ -1,0 +1,14 @@
+html {
+  --clr-red: rgb(196, 2, 51);
+  --clr-red-rgb: 196, 2, 51;
+  --clr-yellow: #ffd300;
+  --clr-yellow-rgb: 255, 211, 0;
+  --clr-green: #009f6b;
+  --clr-green-rgb: 0, 159, 107;
+  --clr-blue: #0087bd;
+  --clr-blue-rgb: 0, 135, 189;
+  --clr-black: #001924;
+  --clr-black-rgb: 0, 25, 36;
+
+  --border: 2px solid var(--clr-black);
+}
