@@ -1,0 +1,27 @@
+{
+  "name": "Only You'd - how well do you know your friends?",
+  "short_name": "Only You'd",
+  "description": "Only You'd is an open-sourced and crowd-sourced social game inspired by Loaded Questions. Only You'd tests how well you really know the friends you're playing with.",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "lang": "en"
+}
