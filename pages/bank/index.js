@@ -1,7 +1,7 @@
 import { MemoizedBank } from '../../components/bank/bank';
 import styles from '../../styles/pages/Bank.module.scss';
 
-const baseURL = process.env.URL || 'http://localhost:3000';
+const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : '';
 
 const BankPage = props => {
   const { bank } = props;
@@ -19,6 +19,7 @@ const BankPage = props => {
 };
 
 const getStaticProps = async () => {
+  console.log('Fetching questions...', baseURL);
   const bank = await fetch(`${baseURL}/api/bank`).then(res => res.json());
 
   return {
