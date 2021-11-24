@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import styles from '../styles/pages/Home.module.scss';
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className={styles.container}>
-      
+
       <h2 className={styles.title}>
         Welcome to Only You&lsquo;d!
       </h2>
@@ -18,8 +18,12 @@ const Home = () => {
           <a>Play a game online!</a>
         </Link>
 
-        <Link href="/data">
+        <Link href="/bank">
           <a>View the question bank!</a>
+        </Link>
+
+        <Link href="/make">
+          <a>Contribute to the question bank!</a>
         </Link>
       </section>
         
@@ -27,4 +31,4 @@ const Home = () => {
   )
 };
 
-export default Home;
+export default HomePage;
