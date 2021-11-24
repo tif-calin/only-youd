@@ -1,0 +1,90 @@
+.bank {
+  border: var(--border);
+  border-radius: 0.25rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  border-radius: 0.25rem;
+  padding: 0.125rem;
+
+  &:nth-of-type(2n) {
+    background-color: rgba(var(--clr-green-rgb), 0.15);
+  }
+}
+
+.toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 
+    inset -0.05rem 0.125rem 0.5rem rgba(0, 0, 0, 0.125),
+    inset 0.05rem -0.125rem 0.5rem rgba(0, 0, 0, 0.125)
+  ;
+  margin-bottom: 0.5rem;
+
+  & > fieldset {
+    flex-basis: calc((100% - 2rem)/3);
+    flex-grow: 1;
+    border: var(--border);
+    border-color: #ccc;
+    border-radius: 0.25rem;
+    box-shadow: 
+      -0.05rem 0.125rem 0.5rem rgba(0, 0, 0, 0.125),
+      0.05rem -0.125rem 0.5rem rgba(0, 0, 0, 0.125)
+    ;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
+
+    label {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+    }
+
+    & > span:first-child {
+      justify-self: left;
+      margin-right: 0.25rem;
+      font-weight: 500;
+      flex-basis: 50%;
+  
+      &::after {
+        content: ':';
+      }
+    }
+  }    
+}
+
+.toolbar fieldset[name=search] {
+  input {
+    width: 8rem;
+    max-width: 100%;
+    transition: all 0.25s;
+
+    &:focus {
+      width: 100%;
+    }
+  }
+}
+
+.toolbar fieldset[name="how-many"] {
+  input[type=number] {
+    width: 3rem;
+    transition: all 0.25s;
+
+    &:focus {
+      width: 100%;
+    }
+  }
+}
