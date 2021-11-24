@@ -13,11 +13,12 @@ const BankPage = props => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Question Bank</h2>
-      <p>{bank.length} questions</p>
 
       <MemoizedBank 
         bank={bank}
       />
+
+      <p>{bank.length} total questions</p>
     </div>
   );
 };

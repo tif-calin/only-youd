@@ -51,17 +51,17 @@ const Toolbar = props => {
       className={styles.toolbar}
     >
       <fieldset name="search">
-        <span>search</span>
+        <span>Search</span>
         <input 
           type="search" 
           name="search"
-          placeholder="What is the most amazing..." 
+          placeholder="Search here" 
           onChange={handleChange}
         />
       </fieldset>
 
       <fieldset name="how-many">
-        <span>show</span>
+        <span>Show</span>
         <label htmlFor="how-many-all">
           <input 
             type="radio" 
@@ -96,7 +96,7 @@ const Toolbar = props => {
       </fieldset>
 
       <fieldset name="sort-by">
-        <span>sort</span>
+        <span>Sort</span>
         <select 
           name="sort-by"
           onChange={handleChange}

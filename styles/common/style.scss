@@ -13,13 +13,15 @@ button, select, [type=search], [type=number] {
   ;
 }
 
-button {
-  background-color: rgba(var(--clr-green-rgb), 0.15);
-
+button, select {
   box-shadow: 
     0.05rem 0.1rem 0.4rem rgba(0, 0, 0, 0.125),
     -0.05rem 0.1rem 0.4rem rgba(0, 0, 0, 0.125)
   ;
+}
+
+button {
+  background-color: rgba(var(--clr-green-rgb), 0.15);
 }
 
 [type=radio] {
