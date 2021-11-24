@@ -1,9 +1,16 @@
-.bank {
-  border: var(--border);
+.bank, .toolbar {
+  display: flex;
+  width: 100%;
+
   border-radius: 0.25rem;
   padding: 1rem;
+  box-shadow: 
+    inset -0.05rem 0.125rem 0.5rem rgba(0, 0, 0, 0.125),
+    inset 0.05rem -0.125rem 0.5rem rgba(0, 0, 0, 0.125)
+  ;
+}
 
-  display: flex;
+.bank {
   flex-direction: column;
 }
 
@@ -17,24 +24,14 @@
 }
 
 .toolbar {
-  width: 100%;
-  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  box-shadow: 
-    inset -0.05rem 0.125rem 0.5rem rgba(0, 0, 0, 0.125),
-    inset 0.05rem -0.125rem 0.5rem rgba(0, 0, 0, 0.125)
-  ;
   margin-bottom: 0.5rem;
 
   & > fieldset {
     flex-basis: calc((100% - 2rem)/3);
     flex-grow: 1;
-    border: var(--border);
-    border-color: #ccc;
     border-radius: 0.25rem;
     box-shadow: 
       -0.05rem 0.125rem 0.5rem rgba(0, 0, 0, 0.125),
@@ -43,7 +40,7 @@
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: right;
     gap: 0.25rem;
     padding: 0.5rem 0.75rem;
 
@@ -54,7 +51,8 @@
     }
 
     & > span:first-child {
-      justify-self: left;
+      flex-grow: 1;
+      justify-self: flex-start;
       margin-right: 0.25rem;
       font-weight: 500;
       flex-basis: 50%;
