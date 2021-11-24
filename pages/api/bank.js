@@ -1,4 +1,4 @@
-import { fetchQuestions } from '../../lib/questions';
+import fetchQuestions from '../../lib/questions';
 
 const handler = (req, res) => {
   // const { id } = req.query;
