@@ -1,7 +1,10 @@
 import { MemoizedBank } from '../../components/bank/bank';
 import styles from '../../styles/pages/Bank.module.scss';
 
-const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : '';
+const baseURL = process.env.NODE_ENV === 'production'
+  ? 'https://only-youd.vercel.app'
+  : 'http://localhost:3000'
+;
 
 const BankPage = props => {
   const { bank } = props;
