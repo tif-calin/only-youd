@@ -26,12 +26,38 @@
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+}
 
-  & > * {
+.cardbutton {
+  border: var(--border);
+  padding: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 100%;
+  position: relative;
+  background-color: #eee5;
+
+  &:first-of-type { --clr-accent: var(--clr-red); }
+  &:nth-of-type(2) { --clr-accent: var(--clr-yellow); }
+  &:nth-of-type(3) { --clr-accent: var(--clr-blue); }
+
+  &::before {
     border: var(--border);
-    padding: 1rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 100%;
+    content: '';
+    position: absolute;
+    left: 0.25rem;
+    top: 0.25rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-accent);
+    z-index: -1;
+    opacity: 0.45;
+
+    transition: all 0.25s;
+  }
+
+  &:hover::before {
+    inset: -1px;
+    opacity: 0.65;
   }
 }

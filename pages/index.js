@@ -14,16 +14,16 @@ const HomePage = () => {
       </p>
 
       <section className={styles.launchpad}>
-        <Link href="/game">
-          <a>Play a game online!</a>
+        <Link href="/play">
+          <a className={styles.cardbutton}>Play a game online!</a>
         </Link>
 
         <Link href="/bank">
-          <a>View the question bank!</a>
+          <a className={styles.cardbutton}>View the question bank!</a>
         </Link>
 
-        <Link href="/make">
-          <a>Contribute to the question bank!</a>
+        <Link href="/help">
+          <a className={styles.cardbutton}>Contribute to the question bank!</a>
         </Link>
       </section>
         
