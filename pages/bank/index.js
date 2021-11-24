@@ -22,8 +22,8 @@ const BankPage = props => {
 };
 
 const getStaticProps = async () => {
-  console.log('Fetching questions...', baseURL);
-  const bank = await fetch(`${baseURL}/api/bank`).then(res => res.json());
+  const res = await fetch(`${baseURL}/api/bank`);
+  const bank = await res.json() || [];
 
   return {
     props: {
