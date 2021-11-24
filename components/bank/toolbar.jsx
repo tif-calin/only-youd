@@ -4,8 +4,8 @@ import styles from './bank.module.scss';
 const Toolbar = props => {
   const { handleBankReorder } = props;
 
-  const [sortBy, setSortBy] = useState();
-  const [showAll, setShowAll] = useState(false);
+  const [sortBy, setSortBy] = useState('abc');
+  const [showAll, setShowAll] = useState(true);
   const [howMany, setHowMany] = useState(4);
 
   const handleChange = e => {
@@ -39,9 +39,6 @@ const Toolbar = props => {
         handleBankReorder({ sort: value });
         break;
     }
-
-    console.log({name, value});
-    console.log({ showAll, howMany });
   };
 
   const handleRandomize = () => {
@@ -107,7 +104,7 @@ const Toolbar = props => {
         >
           <option value="abc">alphabetical</option>
           <option value="length">length</option>
-          <option value="random" disabled>random</option>
+          <option value="random" disabled defaultChecked>random</option>
         </select>
         <button type="button" onClick={handleRandomize}>randomize</button>
       </fieldset>
