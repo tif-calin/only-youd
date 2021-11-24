@@ -10,5 +10,7 @@ html {
   --clr-black: #001924;
   --clr-black-rgb: 0, 25, 36;
 
+  --clr-accent: rgba(var(--clr-green-rgb), 0.15);
+
   --border: 2px solid var(--clr-black);
 }
