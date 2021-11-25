@@ -1,6 +1,7 @@
 import { MemoizedBank } from '../../components/bank/bank';
 import question from '../../data/questions';
 import styles from '../../styles/pages/Bank.module.scss';
+import utilStyles from '../../styles/utils.module.scss';
 
 const baseURL = process.env.NODE_ENV === 'production'
   ? 'https://only-youd.vercel.app'
@@ -12,7 +13,7 @@ const BankPage = props => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Question Bank</h2>
+      <h2 className={utilStyles.pagetitle}>Question Bank</h2>
 
       <MemoizedBank 
         bank={bank}
