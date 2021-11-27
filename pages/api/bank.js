@@ -7,7 +7,7 @@ const handler = async (req, res) => {
   switch (req.method) {
     case 'GET':
       try {
-        const bank = await Question.findMany();
+        const bank = await Question.findMany({});
         res.status(200).json(bank);
       } catch (error) {
         console.error(error);
@@ -15,6 +15,17 @@ const handler = async (req, res) => {
       }
       break;
     case 'POST':
+      try {
+        const questions = req.body;
+        console.log(questions);
+        const response = await Question.createMany([questions].flat());
+        
+        res.status(201).json(response);
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({});
+      }
+      break;
     default:
       res.status(501);
   }

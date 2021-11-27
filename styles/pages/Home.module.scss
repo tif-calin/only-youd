@@ -52,13 +52,12 @@
     height: 100%;
     background-color: var(--clr-accent);
     z-index: -1;
-    opacity: 0.45;
+    opacity: 0.5;
 
     transition: all 0.25s;
   }
 
   &:hover::before {
     inset: -1px;
-    opacity: 0.65;
   }
 }
