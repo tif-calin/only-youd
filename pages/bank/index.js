@@ -34,6 +34,8 @@ const getStaticProps = async () => {
     bank = questions;
   }
 
+  bank = JSON.parse(JSON.stringify(bank));
+
   return {
     props: {
       bank
