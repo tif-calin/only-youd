@@ -9,6 +9,8 @@ html {
   --clr-blue-rgb: 0, 135, 189;
   --clr-black: #001924;
   --clr-black-rgb: 0, 25, 36;
+  --clr-white: #fcfdfe;
+  --clr-white-rgb: 252, 253, 254;
 
   --clr-accent: rgba(var(--clr-green-rgb), 0.15);
 

@@ -21,7 +21,10 @@ button, select {
 }
 
 button {
-  background-color: rgba(var(--clr-green-rgb), 0.15);
+  // background-color: rgba(var(--clr-green-rgb), 0.15);
+  // background-color: rgba(var(--clr-black-rgb), 0.15);
+  background-color: var(--clr-black);
+  color: var(--clr-white);
 }
 
 [type=radio] {
