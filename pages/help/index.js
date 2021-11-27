@@ -17,6 +17,17 @@ const HelpPage = ({ bank }) => {
     setInput(e.target.value.trim());
   };
 
+  const handleSubmit = async e => {
+    e.preventDefault();
+
+    if (!input) return;
+
+    const resp = await fetch(`${baseURL}/api/bank`, { method: 'POST', body: input });
+    console.log(resp);
+
+    setInput('');
+  };
+
   return (
     <div className={styles.container}>
       <h2 className={utilStyles.pagetitle}>Help</h2>
@@ -24,7 +35,7 @@ const HelpPage = ({ bank }) => {
       <form className={styles.form}>
         <h3>Suggest a question!</h3>
         <input type="text" placeholder={bank[0]} onChange={handleTextInputChange} />
-        <button type="submit">Submit</button>
+        <button onClick={handleSubmit} type="submit">Submit</button>
       </form>
 
       <div>
@@ -41,6 +52,7 @@ const getStaticProps = async () => {
   try {
     const res = await fetch(`${baseURL}/api/bank`);
     bank = (await res.json())?.map(q => q.question) || [];
+    bank = JSON.parse(JSON.stringify(bank));
   } catch (error) {
     console.error(error);
     bank = [];
