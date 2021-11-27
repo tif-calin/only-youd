@@ -1,5 +1,4 @@
 import Question from '../../lib/models/Question';
-import questions from '../../data/questions';
 
 const handler = async (req, res) => {
   // const { id } = req.query;
@@ -7,23 +6,23 @@ const handler = async (req, res) => {
   switch (req.method) {
     case 'GET':
       try {
-        const bank = await Question.findMany({});
+        const bank = await Question.find({});
+        
         res.status(200).json(bank);
       } catch (error) {
         console.error(error);
-        res.status(200).json(questions);
+        res.status(500).json({ error });
       }
       break;
     case 'POST':
       try {
         const questions = req.body;
-        console.log(questions);
-        const response = await Question.createMany([questions].flat());
+        const response = await Question.create([questions].flat());
         
         res.status(201).json(response);
       } catch (error) {
         console.error(error);
-        res.status(500).json({});
+        res.status(500).json({ error });
       }
       break;
     default:
