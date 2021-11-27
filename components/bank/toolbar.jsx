@@ -55,7 +55,7 @@ const Toolbar = props => {
         <input 
           type="search" 
           name="search"
-          placeholder="Search here" 
+          placeholder="search here" 
           onChange={handleChange}
         />
       </fieldset>
