@@ -1,5 +1,5 @@
 import { MemoizedBank } from '../../components/bank/bank';
-import question from '../../data/questions';
+import questions from '../../data/questions';
 import styles from '../../styles/pages/Bank.module.scss';
 import utilStyles from '../../styles/utils.module.scss';
 
@@ -31,8 +31,10 @@ const getStaticProps = async () => {
     bank = (await res.json())?.map(q => q.question) || [];
   } catch (error) {
     console.error(error);
-    bank = question;
+    bank = questions;
   }
+
+  bank = JSON.parse(JSON.stringify(bank));
 
   return {
     props: {

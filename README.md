@@ -6,11 +6,18 @@ An open-sourced and crowd-source project inspired by the board game *Loaded Ques
  - Sass
  - MongoDB
 
+**libraries**:
+ - fuzzysort
+
 ## Todo
 **roadmap**:
- - [ ] mongodb database using Atlas
+ - [•] mongodb database using Atlas
  - [ ] redis cache
  - [ ] use socket.io 
+
+**todo**:
+ - [ ] useContext to make all the questions available for all pages of the app
+ - [ ] memoize components to optimize performance
 
 **sidequests**:
  - [ ] [make it a PWA](https://melvingeorge.me/blog/nextjs-pwa)
