@@ -50,13 +50,15 @@ const getStaticProps = async () => {
   let bank;
 
   try {
-    const res = await fetch(`${baseURL}/api/bank`);
-    bank = (await res.json())?.map(q => q.question) || [];
-    bank = JSON.parse(JSON.stringify(bank));
+    const res = await fetch(`${baseURL}/api/questions`);
+    const data = await res.json();
+    bank = data?.map(q => q.question) || [];
   } catch (error) {
     console.error(error);
     bank = [];
   }
+
+  bank = JSON.parse(JSON.stringify(bank));
 
   return {
     props: {
