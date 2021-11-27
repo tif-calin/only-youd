@@ -1,4 +1,4 @@
-import fetchQuestions from '../../lib/questions';
+import Question from '../../lib/models/Question';
 import questions from '../../data/questions';
 
 const handler = async (req, res) => {
@@ -6,10 +6,13 @@ const handler = async (req, res) => {
 
   switch (req.method) {
     case 'GET':
-      if (process.env.NODE_DEV === 'development') {
-        const bank = await fetchQuestions();
+      try {
+        const bank = await Question.findMany();
         res.status(200).json(bank);
-      } else res.status(200).json(questions);
+      } catch (error) {
+        console.error(error);
+        res.status(200).json(questions);
+      }
       break;
     case 'POST':
     default:

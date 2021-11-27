@@ -1,4 +1,4 @@
-const data = [
+module.exports = [
   "A random person is chosen to be president of the US. What is the worst case scenario?",
   "Clear your mind. Focus on this question: What is the first happy memory that pops into your head?",
   "Come up with a nickname for someone in this room?",
@@ -248,5 +248,3 @@ const data = [
   "Would you rather be super huge like a giant or very tiny like an ant? Explain why.",
   "Vibe check! What's your vibe?"
 ];
-
-export default data;

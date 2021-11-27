@@ -28,8 +28,9 @@ const getStaticProps = async () => {
   let bank;
   try {
     const res = await fetch(`${baseURL}/api/bank`);
-    bank = await res.json() || [];
-  } catch {
+    bank = (await res.json())?.map(q => q.question) || [];
+  } catch (error) {
+    console.error(error);
     bank = question;
   }
 
