@@ -1,0 +1,36 @@
+.container {
+
+  & > * {
+    width: 100%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+
+  & > fieldset {
+    display: flex;
+    gap: 0.5rem;
+    place-items: center;
+    width: 100%;
+
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    padding: 1rem;
+
+    & > label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
+
+  & button[type="submit"] {
+    width: 12rem;
+  }
+}

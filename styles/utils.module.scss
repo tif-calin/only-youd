@@ -1,6 +1,43 @@
 .pagetitle {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 666;
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.cardbutton {
+  border: var(--border);
+  border-radius: 0;
+  padding: 1rem;
+  height: auto;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  max-width: 100%;
+  position: relative;
+  background-color: #eee5;
+  color: var(--clr-black);
+
+  &:first-of-type { --clr-accent: var(--clr-red); }
+  &:nth-of-type(2) { --clr-accent: var(--clr-yellow); }
+  &:nth-of-type(3) { --clr-accent: var(--clr-blue); }
+  &:nth-of-type(4) { --clr-accent: var(--clr-green); }
+
+  &::before {
+    border: var(--border);
+    content: '';
+    position: absolute;
+    left: 0.25rem;
+    top: 0.25rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-accent);
+    z-index: -1;
+    opacity: 0.5;
+
+    transition: all 0.25s;
+  }
+
+  &:hover::before {
+    inset: -1px;
+  }
 }

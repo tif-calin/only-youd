@@ -4,7 +4,8 @@ An open-sourced and crowd-source project inspired by the board game *Loaded Ques
 ## Tech
  - Next.js
  - Sass
- - MongoDB
+ - MongoDB with Atlas
+ - Pusher for websockets
 
 **libraries**:
  - fuzzysort

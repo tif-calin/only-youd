@@ -6,12 +6,15 @@ const db = await dbPromise;
 const seedData = async () => {
   const collection = db.collection('questions');
   console.log('Seeding data...');
-  const response = await collection.insertMany(questions.map(question => ({ 
-    question,
-    updatedAt: new Date()
-  })));
+  return await collection.create(questions);
+};
 
-  return response;
+const seedUserData = async () => {
+  const collection = db.collection('users');
+
+  return await collection.create([
+    
+  ]);
 };
 
 seedData();
