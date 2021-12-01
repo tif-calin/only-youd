@@ -17,6 +17,8 @@ An open-sourced and crowd-source project inspired by the board game *Loaded Ques
  - [ ] use socket.io 
 
 **todo**:
+ - [ ] make account system with optional passwords and bcrypt
+ - [ ] use Pusher to make live games
  - [ ] useContext to make all the questions available for all pages of the app
  - [ ] memoize components to optimize performance
  - [ ] implement SWR
