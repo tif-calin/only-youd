@@ -38,10 +38,10 @@ const HelpPage = ({ bank }) => {
         <button onClick={handleSubmit} type="submit">Submit</button>
       </form>
 
-      <div>
+      {Boolean(input) && <div>
         <h3>Similar questions:</h3>
         <QueriedList list={bank} query={input} />
-      </div>
+      </div>}
     </div>
   );
 };
