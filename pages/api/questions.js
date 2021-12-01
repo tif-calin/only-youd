@@ -1,18 +1,10 @@
 import Question from '../../lib/models/Question';
 
 const handler = async (req, res) => {
-  // const { id } = req.query;
-
   switch (req.method) {
     case 'GET':
-      try {
-        const bank = await Question.find({});
-        
-        res.status(200).json(bank);
-      } catch (error) {
-        console.error(error);
-        res.status(500).json({ error });
-      }
+      const resp = await get();
+      res.status(resp.error ? 500 : 200).json(resp);
       break;
     case 'POST':
       try {
@@ -30,4 +22,14 @@ const handler = async (req, res) => {
   }
 };
 
+const get = async () => {
+  try {
+    return await Question.find({});
+  } catch (error) {
+    console.error(error);
+    return { error };
+  }
+};
+
 export default handler;
+export { get };
