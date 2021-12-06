@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow-inner);
+  border-radius: 0.5rem;
+
+  & > * {
+    width: 20rem;
+    max-width: calc(100vw - 5rem);
+  }
+}
+
+.userform {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  border-radius: 0.5rem;
+
+  input {
+    max-width: 100%;
+  }
+
+  button {
+    flex-grow: 1;
+  }
+}
