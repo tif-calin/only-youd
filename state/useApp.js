@@ -1,9 +1,6 @@
 import { useContext, createContext, useEffect, useState } from 'react';
-
-const baseURL = process.env.NODE_ENV === 'production'
-  ? 'https://only-youd.vercel.app'
-  : 'http://localhost:3000'
-;
+import { apiURL } from '../lib/config';
+// import { get as fetchQuestions } from '../pages/api/questions';
 
 const AppContext = createContext();
 
@@ -12,7 +9,7 @@ const AppProvider = ({ children }) => {
   const [bank, setBank] = useState([]);
 
   useEffect(() => {
-    fetch(`${baseURL}/api/questions`)
+    fetch(`${apiURL}/questions`)
       .then(res => res.json())
       .then(data => {
         setBank(data?.map(q => q.question) || []);
